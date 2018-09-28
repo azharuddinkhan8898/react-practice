@@ -18,7 +18,7 @@ class App extends Component {
     })
   }
   adduser = (user) => {
-    user.id = Math.random();
+    user.id = Math.floor(Math.random() * 10000);
     let users = [...this.state.users, user]
     this.setState({
       users:users
